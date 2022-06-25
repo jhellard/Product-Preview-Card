@@ -1,0 +1,114 @@
+@import "globals";
+@import "mixins";
+
+body {
+  background-color: $cream;
+}
+
+.card {
+  height: 615px;
+  width: 345px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  @include md {
+    display: flex;
+    height: 450px;
+    width: 600px;
+  }
+
+  &__image {
+    max-width: 345px;
+    border-radius: 10px 10px 0 0;
+
+    @include md {
+      max-width: 300px;
+      border-radius: 10px 0 0 10px;
+      content: url(../images/image-product-desktop.jpg);
+    }
+  }
+
+  &__info {
+    margin: 1.5rem;
+  }
+
+  &__product {
+    letter-spacing: 0.35rem;
+    font-family: "Montserrat", sans-serif;
+    color: $darkGrayishBlue;
+  }
+
+  &__description {
+    font-family: "Montserrat", sans-serif;
+    color: $darkGrayishBlue;
+    font-size: 13px;
+    line-height: 1.3rem;
+    margin-bottom: 3rem;
+
+    @include md {
+      margin-bottom: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  h1 {
+    font-family: "Fraunces", serif;
+    font-size: 1.875rem;
+    margin: 0.5rem 0;
+
+    @include md {
+      margin: 1rem 0;
+    }
+  }
+
+  &__prices {
+    font-family: "Fraunces", serif;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      margin-bottom: 2rem;
+    }
+
+    span {
+      // Current Price (With discount)
+      &:first-of-type {
+        font-size: 1.875rem;
+        color: $darkCyan;
+        margin-right: 1.35rem;
+      }
+
+      // Price off discount
+
+      &:last-of-type {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.875rem;
+        color: $darkGrayishBlue;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: $darkCyan;
+    color: $white;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+
+    img {
+      margin-right: 0.75rem;
+    }
+
+    &:hover {
+      background-color: $veryDarkCyan;
+      cursor: pointer;
+    }
+  }
+}

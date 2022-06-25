@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container-centered {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Colors
+
+$darkCyan: hsl(158, 36%, 37%);
+$veryDarkCyan: hsl(156, 42%, 18%);
+$cream: hsl(30, 38%, 92%);
+$veryDarkBlue: hsl(212, 21%, 14%);
+$darkGrayishBlue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+// Font
+
+body {
+  font-size: 14px;
+}
